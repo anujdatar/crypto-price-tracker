@@ -1,0 +1,32 @@
+{
+  "name": "btc-price-tracker",
+  "version": "1.0.0",
+  "description": "Track BTC price and notify when target price is reached",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujdatar/BTC-price-tracker.git"
+  },
+  "keywords": [
+    "Bitcoin",
+    "Cyrpto-currency",
+    "ElectronJS"
+  ],
+  "author": "Anuj Datar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anujdatar/BTC-price-tracker/issues"
+  },
+  "homepage": "https://github.com/anujdatar/BTC-price-tracker#readme",
+  "devDependencies": {
+    "electron": "^2.0.3",
+    "electron-packager": "^12.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

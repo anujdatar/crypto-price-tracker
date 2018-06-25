@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+# Dolphin file browser (KDE) file
+.directory
+
+# Release builds
+release-builds
+
+# IDE related
+.spyder
+.idea
+.vscode
