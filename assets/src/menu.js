@@ -1,6 +1,7 @@
-const mainJs = require('../../main.js')
+const remote = require('electron')
+const Menu = remote.Menu
 
-exports.mainMenuTemplate = [
+menuTemplate = [
   {
     label: 'File',
     submenu: [
@@ -14,7 +15,8 @@ exports.mainMenuTemplate = [
       {
         label: 'Exit',
         click() {
-          mainJs.close_all()
+          remote.app.quit()
+          // mainJs.close_all()
         },
         accelerator: 'Ctrl+Q',
         icon: __dirname + '/exit-icon16x16.png'
@@ -33,3 +35,6 @@ exports.mainMenuTemplate = [
     ]
   }
 ]
+
+menu  = Menu.buildFromTemplate(menuTemplate)
+Menu.setApplicationMenu(menu)

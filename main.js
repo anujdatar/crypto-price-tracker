@@ -3,7 +3,7 @@ const url = require('url')
 const path = require('path')
 const menuFile = require('./assets/src/menu')
 
-const{app, BrowserWindow, Menu, ipcMain} = electron
+const{app, BrowserWindow, ipcMain} = electron
 
 let mainWindow
 
@@ -33,8 +33,8 @@ function createWindow() {
     app.quit()
   })
 
-  const mainMenu = Menu.buildFromTemplate(menuFile.mainMenuTemplate)
-  Menu.setApplicationMenu(mainMenu)
+  // const mainMenu = Menu.buildFromTemplate(menuFile.mainMenuTemplate)
+  // Menu.setApplicationMenu(mainMenu)
 
 }
 
