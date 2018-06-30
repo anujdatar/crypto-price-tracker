@@ -1,25 +1,30 @@
 const remote = require('electron')
 const Menu = remote.Menu
+const shell = require('electron').shell
+const path = require('path')
 
 menuTemplate = [
   {
-    label: 'File',
+    label: 'Menu',
     submenu: [
       {
-        label: 'Add Target'
+        label: 'Adjust Notification Valiue'
       },
       {
-        label: 'Go To Link'
+        label: 'CoinMarketCap',
+        click: () => {
+          shell.openExternal('http://coinmarketcap.com')
+        }
       },
       {type: 'separator'},
       {
         label: 'Exit',
-        click() {
+        click: () =>  {
           remote.app.quit()
           // mainJs.close_all()
         },
         accelerator: 'Ctrl+Q',
-        icon: __dirname + '/exit-icon16x16.png'
+        icon: path.join(__dirname, '../assets/images/exit-icon16x16.png')
       }
     ]
   },

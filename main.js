@@ -1,16 +1,12 @@
+// require('electron-reload')(__dirname)
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
-const menuFile = require('./assets/src/menu')
+const menuFile = require('./src/menu')
 
 const{app, BrowserWindow, ipcMain} = electron
 
 let mainWindow
-
-// function initialize() {
-//   const shouldQuit = makeSingleInstane()
-//   if (shouldQuit) return app.quit()
-// }
 
 function createWindow() {
   // Create main browser window
@@ -23,18 +19,15 @@ function createWindow() {
 
   // load index.html of the app in main window
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, '/assets/src/index.html'),
+    pathname: path.join(__dirname, '/src/index.html'),
     protocol: 'file',
     slashes: true
   }))
 
-  mainWindow.on('closed', function() {
+  mainWindow.on('closed', () => {
     // mainWindow = null
     app.quit()
   })
-
-  // const mainMenu = Menu.buildFromTemplate(menuFile.mainMenuTemplate)
-  // Menu.setApplicationMenu(mainMenu)
 
 }
 
