@@ -2,7 +2,8 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
-const menuFile = require('./src/menu')
+// const ipcMain = require('electron').ipcMain
+require('./src/menu')
 
 const{app, BrowserWindow, ipcMain} = electron
 
@@ -13,7 +14,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, '/assets/images/logo.png'),
+    icon: path.join(__dirname, '/assets/images/bitcoin.png'),
     title: 'BitCoin Price Tracker'
   })
 
@@ -30,7 +31,7 @@ function createWindow() {
   })
 
   //Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
 }
 
@@ -48,6 +49,10 @@ app.on('activate', () => {
   }
 })
 
-exports.close_all = function() {
-  app.quit()
-}
+// exports.close_all = function() {
+//   app.quit()
+// }
+
+ipcMain.on('update-notify-value', (event, arg) => {
+  mainWindow.webContents.send('targetPriceVal', arg)
+})

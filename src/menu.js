@@ -36,6 +36,14 @@ menuTemplate = [
       },
       {
         label: 'Check for updates'
+      },
+      {
+        label: 'Toggle DevTools',
+        click: (item, focusedWindow) => {
+          if (focusedWindow) {
+            focusedWindow.toggleDevTools()
+          }
+        }
       }
     ]
   }

@@ -1,27 +1,49 @@
 const electron = require('electron')
 const path = require('path')
 const remote = electron.remote
-const axios = require('axios')
+const ipcRenderer = electron.ipcRenderer
 
-const notifyBtn = document.getElementById('notifyBtn')
-var price = document.querySelector('h1')
-var targetPrice = document.getElementById('targetPrice')
+const currentWindow = remote.getCurrentWindow()
+document.getElementById('notifyVal').focus()
 
-function getBTC() {
-    axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD')
-    .then(res => {
-        console.log(res)
-        const cryptos = res.data.BTC.USD
-        price.innerHTML = '$'+cryptos.toLocaleString('en')
-    })
+function closeWindow() {
+    currentWindow.close()
 }
-
-getBTC();
-setInterval ( getBTC, 30000 );
 
 const closeBtn = document.getElementById('closeBtn')
 
 closeBtn.addEventListener('click', () => {
-    var window = remote.getCurrentWindow();
-    window.close()
+    closeWindow()
+})
+
+const updateBtn = document.getElementById('updateBtn')
+
+function updateValue(arg) {
+    ipcRenderer.send('update-notify-value', arg)
+    closeWindow()
+}
+
+updateBtn.addEventListener('click', () => {
+    const notifyVal = document.getElementById('notifyVal').value
+    if(notifyVal === '') {}
+    else{
+        updateValue(notifyVal)
+    }
+})
+
+let notifyInput = document.getElementById('notifyVal')
+notifyInput.addEventListener('keypress', (event) => {
+    if (event.which === 13) {
+        const notifyVal = document.getElementById('notifyVal').value
+        if (notifyVal === '') {}
+        else{
+            updateValue(notifyVal)
+        }        
+    }
+})
+
+window.addEventListener('keyup', (event) => {
+    if (event.which === 27) {
+        closeWindow()
+    }
 })
