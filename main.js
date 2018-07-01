@@ -49,6 +49,8 @@ app.on('activate', () => {
   }
 })
 
+app.setAppUserModelId('com.aj.crypto')
+
 // exports.close_all = function() {
 //   app.quit()
 // }

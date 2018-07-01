@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Track BTC price and notify when target price is reached",
   "main": "main.js",
+  "appId": "com.aj.crypto",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
