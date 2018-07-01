@@ -29,6 +29,9 @@ function createWindow() {
     app.quit()
   })
 
+  //Open the DevTools.
+  mainWindow.webContents.openDevTools()
+
 }
 
 app.on('ready', createWindow)
