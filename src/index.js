@@ -25,7 +25,7 @@ function getBTC() {
 
         if (targetPriceVal < res.data.USD) {
             console.log('yes')
-            let myNotification = new Notification('title', notification)
+            let myNotification = new Notification(notification.title, notification)
         }
     })
 }
