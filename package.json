@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anujdatar/BTC-price-tracker.git"
+    "url": "git+https://github.com/anujdatar/crypto-price-tracker.git"
   },
   "keywords": [
     "Bitcoin",
@@ -23,9 +23,9 @@
   "author": "Anuj Datar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anujdatar/BTC-price-tracker/issues"
+    "url": "https://github.com/anujdatar/crypto-price-tracker/issues"
   },
-  "homepage": "https://github.com/anujdatar/BTC-price-tracker#readme",
+  "homepage": "https://github.com/anujdatar/crypto-price-tracker#readme",
   "devDependencies": {
     "electron": "^2.0.3",
     "electron-packager": "^12.1.0"
