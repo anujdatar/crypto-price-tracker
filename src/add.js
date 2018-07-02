@@ -1,5 +1,4 @@
 const electron = require('electron')
-const path = require('path')
 const remote = electron.remote
 const ipcRenderer = electron.ipcRenderer
 
@@ -25,8 +24,7 @@ function updateValue(arg) {
 
 updateBtn.addEventListener('click', () => {
     const notifyVal = document.getElementById('notifyVal').value
-    if(notifyVal === '') {}
-    else{
+    if(notifyVal !== '') {
         updateValue(notifyVal)
     }
 })
@@ -35,8 +33,7 @@ let notifyInput = document.getElementById('notifyVal')
 notifyInput.addEventListener('keypress', (event) => {
     if (event.which === 13) {
         const notifyVal = document.getElementById('notifyVal').value
-        if (notifyVal === '') {}
-        else{
+        if (notifyVal !== '') {
             updateValue(notifyVal)
         }        
     }

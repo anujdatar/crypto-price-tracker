@@ -30,15 +30,11 @@ function getBTC() {
 
         if (targetPrice.innerHTML != '' && targetPriceVal < cryptos) {
             console.log('yes')
-<<<<<<< HEAD
             Notification.requestPermission().then((result) => {
                 let myNotification = new Notification(notification.title, notification)
             })
             
             // ipcRenderer.send('electron-toaster-message', notification)
-=======
-            let myNotification = new Notification(notification.title, notification)
->>>>>>> e4d127d683781c18fcb922bc2901ba171e980729
         }
     })
 }
