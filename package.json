@@ -1,7 +1,7 @@
 {
-  "name": "btc-price-tracker",
+  "name": "crypto-price-tracker",
   "version": "1.0.0",
-  "description": "Track BTC price and notify when target price is reached",
+  "description": "Track Cryptocurrency prices and notify when target price is reached",
   "main": "main.js",
   "appId": "com.ajax.crypto",
   "build": {
