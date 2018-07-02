@@ -1,7 +1,8 @@
 const electron = require('electron')
 const path = require('path')
-const BrowserWindow = electron.remote.BrowserWindow
 const axios = require('axios')
+
+const BrowserWindow = electron.remote.BrowserWindow
 const ipcRenderer = electron.ipcRenderer
 
 const notifyBtn = document.getElementById('notifyBtn')
@@ -11,7 +12,11 @@ let targetPriceVal
 
 const notification = {
     title: 'BTC Alert',
-    body: ' BTC just beat your target price!'
+    message: ' BTC just beat your target price!',
+    icon: '../assets/images/bitcoin.png',
+    width: 440,
+    height: 150,
+    timeout: 2500
 }
 
 function getBTC() {
@@ -20,12 +25,16 @@ function getBTC() {
         const cryptos = res.data.USD
         price.innerHTML = '$'+cryptos.toLocaleString('en')
 
-        console.log(targetPriceVal)
-        console.log(res.data.USD)
+        // console.log(targetPriceVal)
+        // console.log(res.data.USD)
 
-        if (targetPriceVal < res.data.USD) {
+        if (targetPrice.innerHTML != '' && targetPriceVal < cryptos) {
             console.log('yes')
-            let myNotification = new Notification('title', notification)
+            Notification.requestPermission().then((result) => {
+                let myNotification = new Notification(notification.title, notification)
+            })
+            
+            // ipcRenderer.send('electron-toaster-message', notification)
         }
     })
 }

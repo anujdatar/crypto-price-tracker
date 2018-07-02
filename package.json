@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Track BTC price and notify when target price is reached",
   "main": "main.js",
-  "appId": "com.aj.crypto",
+  "appId": "com.ajax.crypto",
   "build": {
-    "appId": "com.aj.crypto"
+    "appId": "com.ajax.crypto"
   },
   "scripts": {
     "start": "electron .",
@@ -28,8 +28,7 @@
   "homepage": "https://github.com/anujdatar/BTC-price-tracker#readme",
   "devDependencies": {
     "electron": "^2.0.3",
-    "electron-packager": "^12.1.0",
-    "electron-reload": "^1.2.3"
+    "electron-packager": "^12.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0"

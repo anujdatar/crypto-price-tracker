@@ -37,6 +37,7 @@ menuTemplate = [
       {
         label: 'Check for updates'
       },
+      {type: 'separator'},
       {
         label: 'Toggle DevTools',
         click: (item, focusedWindow) => {

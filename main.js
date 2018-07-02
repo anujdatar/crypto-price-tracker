@@ -2,12 +2,14 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
+// const Toaster = require('electron-toaster')
 // const ipcMain = require('electron').ipcMain
 require('./src/menu')
 
 const{app, BrowserWindow, ipcMain} = electron
 
 let mainWindow
+// let toaster = new Toaster()
 
 function createWindow() {
   // Create main browser window
@@ -49,7 +51,7 @@ app.on('activate', () => {
   }
 })
 
-app.setAppUserModelId('com.aj.crypto')
+app.setAppUserModelId('com.ajax.crypto')
 
 // exports.close_all = function() {
 //   app.quit()
@@ -58,3 +60,7 @@ app.setAppUserModelId('com.aj.crypto')
 ipcMain.on('update-notify-value', (event, arg) => {
   mainWindow.webContents.send('targetPriceVal', arg)
 })
+
+// ipcMain.on('electron-toaster-message', (message) => {
+//   toaster.init(mainWindow)
+// })
