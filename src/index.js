@@ -13,7 +13,7 @@ let targetPriceVal
 const notification = {
     title: 'BTC Alert',
     message: ' BTC just beat your target price!',
-    icon: '../assets/images/bitcoin.png',
+    icon: path.join(__dirname, '../assets/images/bitcoin.png'),
     width: 440,
     height: 150,
     timeout: 2500
@@ -30,8 +30,8 @@ function getBTC() {
 
         if (targetPrice.innerHTML != '' && targetPriceVal < cryptos) {
             console.log('yes')
-            Notification.requestPermission().then((result) => {
-                let myNotification = new Notification(notification.title, notification)
+            Notification.requestPermission().then(() => {
+                new Notification(notification.title, notification)
             })
             
             // ipcRenderer.send('electron-toaster-message', notification)
