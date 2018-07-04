@@ -16,13 +16,13 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, '/assets/images/bitcoin.png'),
+    icon: path.join(__dirname, './assets/images/bitcoin.png'),
     title: 'BitCoin Price Tracker'
   })
 
   // load index.html of the app in main window
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, '/src/index.html'),
+    pathname: path.join(__dirname, './src/index.html'),
     protocol: 'file',
     slashes: true
   }))

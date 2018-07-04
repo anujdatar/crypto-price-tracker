@@ -2,6 +2,7 @@ const remote = require('electron')
 const Menu = remote.Menu
 const shell = require('electron').shell
 const path = require('path')
+const aboutWindow = require('./about')
 
 menuTemplate = [
   {
@@ -32,7 +33,10 @@ menuTemplate = [
     label: 'Info',
     submenu: [
       {
-        label: 'About'
+        label: 'About',
+        click: () => {
+          aboutWindow.createAbout()
+        }
       },
       {
         label: 'Check for updates'

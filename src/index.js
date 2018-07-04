@@ -25,9 +25,6 @@ function getBTC() {
         const cryptos = res.data.USD
         price.innerHTML = '$'+cryptos.toLocaleString('en')
 
-        // console.log(targetPriceVal)
-        // console.log(res.data.USD)
-
         if (targetPrice.innerHTML != '' && targetPriceVal < cryptos) {
             console.log('yes')
             Notification.requestPermission().then(() => {
@@ -55,9 +52,6 @@ notifyBtn.addEventListener('click', () => {
     addWindow.on('close', () => {
         addWindow = null
     })
-    // addWindow.on('show', () => {
-    //     document.getElementById('')
-    // })
     addWindow.show()
 })
 
