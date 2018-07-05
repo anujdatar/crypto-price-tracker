@@ -11,18 +11,36 @@
 
 <body>
   <div class="row">
+
     <div id="price-container">
       <p class="subtext">Current BTC USD</p>
       <h1 id="price">Loading...</h1>
     </div>
-    <div id="goal-container">
-      <p><img src="../assets/images/up.svg"><span id="targetPrice">Choose a Target Price</span></p>
+
+    <div class="trackerImages">
+      <div class="upImage">
+        <img src="../assets/images/up.svg">
+      </div>
+      <div class="downImage">
+        <img src="../assets/images/down.svg">
+      </div>
     </div>
+
+    <div id="goal-container">  
+      <p>
+        <span id="targetPrice">Choose a Target Price</span>
+      </p>
+    </div>
+
     <div id="right-container">
       <button id="notifyBtn">Notify me when..</button>
     </div>
+
   </div>
 
   <script src="index.js"></script>
 </body>
 </html>
+
+
+

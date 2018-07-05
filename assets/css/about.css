@@ -5,6 +5,7 @@ body {
   color:#fff;
   font-family: 'Montserrat';
   margin:0;
+  overflow: hidden;
 }
 
 img {
@@ -17,7 +18,7 @@ img {
 
 .row {
   /* width:100%; */
-  
+
   display: grid;
   grid-template-columns: 40% auto;
   align-items: center;

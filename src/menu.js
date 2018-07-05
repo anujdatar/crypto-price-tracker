@@ -34,6 +34,7 @@ menuTemplate = [
     submenu: [
       {
         label: 'About',
+        role: 'about',
         click: () => {
           aboutWindow.createAbout()
         }
@@ -51,8 +52,19 @@ menuTemplate = [
         }
       }
     ]
+  },
+  {
+    label: 'Reload',
+    click: (item, focusedWindow) => {
+      item = 'file://'+__dirname+'/index.html'
+      focusedWindow.loadURL(item)
+    }
   }
 ]
 
 menu  = Menu.buildFromTemplate(menuTemplate)
 Menu.setApplicationMenu(menu)
+
+
+
+

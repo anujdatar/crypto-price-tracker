@@ -10,7 +10,7 @@
    viewBox="6864.7 1928.95 29.5 14.75"
    version="1.1"
    id="svg7"
-   sodipodi:docname="up.svg"
+   sodipodi:docname="down.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata11">
@@ -39,7 +39,7 @@
      inkscape:zoom="9.6271186"
      inkscape:cx="14.75"
      inkscape:cy="7.375"
-     inkscape:window-x="-7"
+     inkscape:window-x="953"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg7" />
@@ -56,7 +56,7 @@
      id="Path_1"
      data-name="Path 1"
      class="cls-1"
-     d="M6790.8,2011.7l-14.75-14.75-14.75,14.75Z"
-     transform="translate(103.4 -68)"
-     style="fill:#48f94e;fill-opacity:1" />
+     d="m 6894.2,1928.95 -14.75,14.75 -14.75,-14.75 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ff0057" />
 </svg>
