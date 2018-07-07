@@ -56,7 +56,7 @@ menuTemplate = [
   {
     label: 'Reload',
     click: (item, focusedWindow) => {
-      item = 'file://'+__dirname+'/index.html'
+      item = 'file://'+__dirname+'/../sections/index.html'
       focusedWindow.loadURL(item)
     }
   }

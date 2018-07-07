@@ -22,7 +22,7 @@ function createWindow() {
 
   // load index.html of the app in main window
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, './src/index.html'),
+    pathname: path.join(__dirname, './sections/index.html'),
     protocol: 'file',
     slashes: true
   }))

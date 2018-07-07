@@ -15,7 +15,7 @@ module.exports = {
       icon: path.join(__dirname, '../assets/images/bitcoin.png')
     })
     aboutWindow.loadURL(url.format({
-      pathname: path.join(__dirname, './about.html'),
+      pathname: path.join(__dirname, '../sections/about.html'),
       protocol: 'file',
       slashes: true
     }))
