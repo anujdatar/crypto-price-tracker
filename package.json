@@ -31,8 +31,6 @@
     "electron-packager": "^12.1.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "jquery": "^3.3.1",
-    "materialize-css": "^0.100.2"
+    "axios": "^0.18.0"
   }
 }
