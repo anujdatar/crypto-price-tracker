@@ -2,6 +2,7 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
+const Store = require('electron-store')
 // const Toaster = require('electron-toaster')
 // const ipcMain = require('electron').ipcMain
 require('./src/menu')
@@ -51,7 +52,7 @@ app.on('activate', () => {
   }
 })
 
-app.setAppUserModelId('com.ajax.crypto')
+app.setAppUserModelId('com.ajax.cryptracker')
 
 // exports.close_all = function() {
 //   app.quit()
