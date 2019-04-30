@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/anujdatar/crypto-price-tracker#readme",
   "devDependencies": {
-    "electron": "^2.0.11",
-    "electron-packager": "^12.1.0"
+    "electron": "^5.0.0",
+    "electron-packager": "^13.1.1"
   },
   "dependencies": {
     "axios": "^0.18.0"
