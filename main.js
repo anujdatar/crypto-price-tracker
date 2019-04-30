@@ -12,14 +12,6 @@ let mainWindow
 let splash
 
 app.on('ready', () => {
-  //set up tray item
-  tray = new Tray(path.join(__dirname, './assets/images/bitcoin.png'))
-  const contextMenu = Menu.buildFromTemplate([
-    {label: 'item1', type: 'radio'},
-    {label: 'item2', type: 'radio', checked: true}
-  ])
-  tray.setToolTip('myapp')
-  tray.setContextMenu(contextMenu)
   // create main browser window
   mainWindow = new BrowserWindow({
     titleBarStyle: 'hidden',
@@ -44,6 +36,14 @@ app.on('ready', () => {
   mainWindow.once('ready-to-show', () => {
     setTimeout(function() {
       splash.destroy();
+      //set up tray item
+      tray = new Tray(path.join(__dirname, './assets/images/bitcoin.png'))
+      const contextMenu = Menu.buildFromTemplate([
+        {label: 'item1', type: 'radio'},
+        {label: 'item2', type: 'radio', checked: true}
+      ])
+      tray.setToolTip('myapp')
+      tray.setContextMenu(contextMenu)
       mainWindow.show();
     }, 5000)
   });
