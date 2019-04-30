@@ -31,6 +31,9 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+build/
+dist/
+release-builds/
 
 # Dependency directories
 node_modules/
@@ -60,14 +63,30 @@ typings/
 # next.js build output
 .next
 
-# Dolphin file browser (KDE) file
-.directory
+# local env files
+.env.local
+.env.*.local
 
-# Release builds
-release-builds
+# misc
+tmp/
+auth/
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+testem.log
 
-# IDE related
-.spyder
+# Editor directories and files
+.sublime-workspace
+.atom
 .idea
 .vscode
-.vs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+.project
+.classpath
+.c9/
+*.launch
+.settings/
