@@ -2,7 +2,8 @@
   "name": "crypto-price-tracker",
   "version": "1.0.0",
   "description": "crypto currency price tracker and notifier",
-  "author": "Anuj Datar",
+  "author": "Anuj Datar <anuj.datar@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,6 +12,19 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
+  },
+  "keywords": [
+    "cyrptocurrency",
+    "bitcoin",
+    "tracker"
+  ],
+  "homepage": "https://github.com/anujdatar/crypto-price-tracker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujdatar/crypto-price-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anujdatar/crypto-price-tracker/issues"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
