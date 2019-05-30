@@ -27,9 +27,15 @@
     "url": "https://github.com/anujdatar/crypto-price-tracker/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "i": "^0.3.6",
+    "npm": "^6.9.0",
     "nuxt": "^2.4.0",
     "vue-material": "^1.0.0-beta-11"
   },

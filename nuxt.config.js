@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,400italic|Material+Icons' }
     ]
   },
 
@@ -27,12 +28,17 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: 'vue-material/dist/vue-material.min.css', lang: 'css' },
+    { src: '~/assets/theme.scss', lang: 'scss' }, // include vue-material theme engine
+    { src: '@fortawesome/fontawesome-svg-core/styles.css', lang: 'css' } // inclued font-awesome css
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-material' },
+    { src: '~/plugins/font-awesome' }
   ],
 
   /*
@@ -54,6 +60,7 @@ export default {
   ** Build configuration
   */
   build: {
+    vendor: ['vue-material'],
     /*
     ** You can extend webpack config here
     */
